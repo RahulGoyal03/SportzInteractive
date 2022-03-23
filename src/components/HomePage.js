@@ -75,7 +75,7 @@ function HomePage() {
   return ( 
     <div className={classes.root}>
              <header className="App-header">
-                <p>SportzActive</p>
+                <p>Sportz Interactive</p>
             </header>
             {/* -----------Search Bar--------- */}
             <div className={classes.searchWrap}>
