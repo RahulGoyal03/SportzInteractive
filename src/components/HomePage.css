@@ -1,15 +1,4 @@
-.App-header {
-  background-color: #121320;
-  min-height: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin); */
-  font-size: 22px;
-  color: white;
-  margin-bottom: 2%;
-}
+
 
 .App-grid {
   display: flex;
@@ -19,8 +8,6 @@
   background-color: #fbfffb;
   border-radius: 10px;
   opacity: 1;
-  /* margin-left: 5%;
-    margin-right: 5%; */
   margin: 2% 5% 1% 5%;
   padding: 12px;
 }
@@ -28,4 +15,15 @@
   color: #3512f7;
   border: 1px solid black;
   border-radius: 41%;
+}
+
+.App-header {
+  background-color: #121320;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 2%;
 }

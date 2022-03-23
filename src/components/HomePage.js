@@ -96,6 +96,8 @@ function HomePage() {
                         }}
                 />
             </div>
+            {/* --------------------------------------------------- */}
+            
         <Grid container spacing={2} alignItems="flex-end" style={{backgroundColor:"lightgray" }}>
             {playerDetails.map((player, i) => (
                 <Grid item key={i} xs={12} md={6} >
