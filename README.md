@@ -1,7 +1,7 @@
 ﻿# Sportz Interactive Assignment -:
  
 * Fetch the Player details from this url
-https://api.jsonbin.io/b/5d0c6e6a860ae0341876aac6/2
+https://api.npoint.io/20c1afef1661881ddc9c
 
 * Display the list of players as cards in a grid view
 * Show the Image using the id from the images. /playerimages/{Id}.jpg
