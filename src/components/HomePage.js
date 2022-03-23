@@ -68,14 +68,14 @@ function HomePage() {
                 return data
             }
           })
-          setPlayerDetails(items)
+        setPlayerDetails(items)
     }
 // ------------------------------------------------------------------//      
 
   return ( 
     <div className={classes.root}>
              <header className="App-header">
-                <p>FIFA</p>
+                <p>SportzActive</p>
             </header>
             {/* -----------Search Bar--------- */}
             <div className={classes.searchWrap}>
@@ -87,6 +87,7 @@ function HomePage() {
                     style={{width:'70%', marginLeft:'15%'}}
                     onChange={onChange}
                     underlinecolor="#49b2cc"
+                    // -------Input Props--------//
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
@@ -97,7 +98,7 @@ function HomePage() {
                 />
             </div>
             {/* --------------------------------------------------- */}
-            
+
         <Grid container spacing={2} alignItems="flex-end" style={{backgroundColor:"lightgray" }}>
             {playerDetails.map((player, i) => (
                 <Grid item key={i} xs={12} md={6} >
