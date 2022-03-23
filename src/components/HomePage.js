@@ -60,10 +60,11 @@ function HomePage() {
 // ---------------search function on input tag-------------//
 
     const onChange = (e) => {
-        const items = list.filter((data)=>{
+        const items = list.filter((data) => {
             if(e.target.value === "")
                 return data
             else if(data.PFName.toLowerCase().includes(e.target.value.toLowerCase()) || data.TName.toLowerCase().includes(e.target.value.toLowerCase())){
+                // console.log(data)
                 return data
             }
           })
@@ -109,18 +110,21 @@ function HomePage() {
                             <div style={{width:"70%"}}>
                                 <Grid item xs={12} sm container>
 
-                                    {/* ----------Player Description----------- */}
+                                    {/* ----------Player Details----------- */}
                                     <Grid item xs container direction="column" spacing={2}>
                                         <Grid item xs>
+                                        {/* ----------Player Name------- */}
                                             <Typography gutterBottom variant="subtitle1">
                                                <b> {player.PFName} </b>
                                             </Typography>
                                             <Typography variant="body2" gutterBottom>
                                                 {player.SkillDesc}
                                             </Typography>
+                                            {/* ----------Upcoming Match--------- */}
                                             <Typography variant="body2" color="textSecondary">
                                                 Upcoming Match : {player.UpComingMatchesList[0].CCode !== "" ? player.UpComingMatchesList[0].CCode + " vs. " + player.UpComingMatchesList[0].VsCCode : "-"}
                                             </Typography>
+                                            {/* -------Match Timming-------- */}
                                             <Typography variant="body2" color="textSecondary">
                                                 Match Time : {player.UpComingMatchesList[0].MDate !== "" ? new Date(player.UpComingMatchesList[0].MDate+" GMT").toLocaleString() : "-"}
                                             </Typography>
