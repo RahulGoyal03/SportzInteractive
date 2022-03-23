@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import './HomePage.css';
-
 import useStyles from './CommonStyles'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { FaSearchPlus } from "react-icons/fa";
 import { TextField } from '@material-ui/core';
 import InputAdornment from '@material-ui/core/InputAdornment';
+
 
 let list = [];
 
@@ -19,6 +19,9 @@ function HomePage() {
         _fetchData()
     }, [])
 
+
+
+    // --------------fetch the data from the api-----------//
     const _fetchData = async () => {
     fetch("https://api.npoint.io/20c1afef1661881ddc9c")
       .then(res => res.json())
@@ -46,6 +49,16 @@ function HomePage() {
       )
     }
 
+    // --------------------------------------------------------//
+
+
+
+
+
+
+
+// ---------------search function on input tag-------------//
+
     const onChange = (e) => {
         const items = list.filter((data)=>{
             if(e.target.value === "")
@@ -56,13 +69,14 @@ function HomePage() {
           })
           setPlayerDetails(items)
     }
-      
+// ------------------------------------------------------------------//      
 
   return ( 
     <div className={classes.root}>
              <header className="App-header">
                 <p>FIFA</p>
             </header>
+            {/* -----------Search Bar--------- */}
             <div className={classes.searchWrap}>
                 <TextField
                     label="Search Player/Team"
@@ -87,13 +101,15 @@ function HomePage() {
                     <Grid item>
                         <div className="App-grid">
                             <div style={{width:"30%"}}>
+                            {/* --------Player Image------------------- */}
                                 <div className={classes.image}>
                                     <img className={classes.img} alt="player" src={player.image_path} /> 
                                 </div>
                             </div>
                             <div style={{width:"70%"}}>
                                 <Grid item xs={12} sm container>
-                                    
+
+                                    {/* ----------Player Description----------- */}
                                     <Grid item xs container direction="column" spacing={2}>
                                         <Grid item xs>
                                             <Typography gutterBottom variant="subtitle1">
@@ -111,8 +127,10 @@ function HomePage() {
                                             
                                         </Grid>
                                     </Grid>
+
+                                    {/* --------------Player Value---------- */}
                                     <Grid item>
-                                        <Typography variant="subtitle1">${player.Value}</Typography>
+                                        <Typography className="playerValue" variant="subtitle1">${player.Value}</Typography>
                                     </Grid>
                                 </Grid>
                             </div>
